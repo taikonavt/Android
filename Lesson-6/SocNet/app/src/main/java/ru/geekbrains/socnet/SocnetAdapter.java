@@ -44,6 +44,7 @@ public class SocnetAdapter extends RecyclerView.Adapter<SocnetAdapter.ViewHolder
             like.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    dataSource.get(getAdapterPosition()).setLike(like.isChecked());
                     notifyItemChanged(getAdapterPosition());
                 }
             });
